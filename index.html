@@ -1,60 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- Libreria iconos web http://ionic.io -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <title>Landing Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d16" />
+  <title>Emilio Navarro — Desarrollo & Psicología</title>
+  <meta name="description"
+    content="Portfolio de Emilio Navarro: desarrollo de aplicaciones multiplataforma (DAM) y psicología. Proyectos en Kotlin, React y Unity." />
+  <meta property="og:title" content="Emilio Navarro — Desarrollo & Psicología" />
+  <meta property="og:description" content="Apps que entienden un poco mejor a quien las usa." />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b0d16'/%3E%3Ctext x='50' y='70' font-family='Arial' font-weight='800' font-size='52' fill='%23ffb43a' text-anchor='middle'%3EEN%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <section>
-        <header>
-            <div class="navbar">
-                <span>
-                    <a href="index.html">Home</a>
-                </span>
-                <span>
-                    <a href="Aboutme.html">About Me</a>
-                </span>
-   
-                <span>
-                    <a href="Portfolio.html">Portfolio</a>
-                </span>
-            </div>
-        </header>
-        <div class="contenido">
-            <div class="tituloBox">
-                <h1>EMILIO NAVARRO GARCÍA</h1>
-                <br>
-                <h2>Proyecto de psicólogo. </h2>
-                
-                <h2><span> </span></h2>
-                <h2><span></span></h2>
-                <p class="frase"> </p>
-                <a href="Aboutme.html">About Me</a>
-            </div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <div class="grain"></div>
 
-        </div>
-        <div class="copyright">
-            <p>&copy; Personal Web created by Emilio Navarro</p>
-        </div>
-        <ul class="redesSociales">
-            <li><a href="#">
-                    <ion-icon name="mail-open-outline"></ion-icon>
-                </a></li>
-            <li><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-            <li><a href="https://github.com/seakerop">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a></li>
-        </ul>
+  <header class="nav">
+    <span class="brand">EN<span class="dot">.</span></span>
+    <nav>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ═══ hero ═══ -->
+    <section class="hero">
+      <p class="hero-hi reveal">Hola, soy</p>
+      <h1 class="reveal">Emilio<br />Navarro<span class="dot">.</span></h1>
+      <p class="hero-sub reveal">
+        Estudio <b class="dev">desarrollo de aplicaciones</b> y también <b class="psy">psicología</b>.
+        Un combo raro hasta que ves lo que sale: apps que entienden un poco mejor a quien las usa.
+      </p>
+      <p class="now reveal"><span class="pulse"></span> Ahora mismo: puliendo CineMatch, una app para elegir peli en pareja</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-solid" href="#proyectos">Ver proyectos ↓</a>
+        <a class="btn btn-line" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
     </section>
+
+    <!-- ═══ proyectos ═══ -->
+    <section id="proyectos">
+      <h2 class="reveal"><span class="sec-num">01</span> Proyectos</h2>
+
+      <div class="cards">
+        <article class="card featured reveal">
+          <div class="card-visual visual-cine">
+            <div class="mock-swipe">
+              <div class="mini-card back"></div>
+              <div class="mini-card front">
+                <span class="mini-stamp">ME GUSTA</span>
+                <i class="mini-poster"></i>
+                <i class="mini-line"></i>
+                <i class="mini-line short"></i>
+              </div>
+              <div class="mini-actions"><i class="no">✕</i><i class="yes">♥</i></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>CineMatch</h3>
+              <span class="badge badge-wip">En desarrollo</span>
+            </div>
+            <p>
+              En casa tardábamos más en elegir peli que en verla, así que construí la solución:
+              cada uno desliza en su móvil sobre el mismo mazo y cuando los dos decimos que sí, match.
+              Tiempo real entre dispositivos con código de sesión, catálogo de TMDB filtrado por
+              plataforma, mood y duración, y memoria de lo que ya hemos visto para que no vuelva a salir.
+            </p>
+            <div class="stack">
+              <span>React</span><span>Vite</span><span>Firebase</span><span>TMDB API</span><span>PWA</span>
+            </div>
+            <div class="card-links"><span class="soon">Demo en vivo muy pronto</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-visual visual-kotlin">
+            <div class="mock-calc">
+              <div class="calc-display">1.842,50 €</div>
+              <div class="calc-keys"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Calculadora de Salario</h3>
+            </div>
+            <p>Metes tu salario bruto y te dice lo que te queda de verdad. App Android nativa en Kotlin, del ciclo de DAM.</p>
+            <div class="stack"><span>Kotlin</span><span>Android</span></div>
+            <div class="card-links">
+              <a href="https://github.com/seakerop/CalculadoraSalario" target="_blank" rel="noreferrer">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-visual visual-unity">
+            <div class="mock-fps">
+              <span class="cross"></span>
+              <span class="hud-hp"><i></i></span>
+              <span class="hud-ammo">24 / 90</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>DAMFPS</h3>
+            </div>
+            <p>Un shooter en primera persona para pelearme con Unity de verdad: movimiento, cámara y mis primeros shaders propios.</p>
+            <div class="stack"><span>Unity</span><span>C#</span><span>ShaderLab</span></div>
+            <div class="card-links">
+              <a href="https://github.com/seakerop/DAMFPS" target="_blank" rel="noreferrer">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-visual visual-web">
+            <div class="mock-web">
+              <div class="web-bar"><i></i><i></i><i></i></div>
+              <div class="web-cols"><span></span><span></span><span></span></div>
+            </div>
+            <div class="mock-phone">
+              <div class="web-cols one"><span></span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Web Responsive</h3>
+            </div>
+            <p>La misma página recolocándose sola de móvil a escritorio. Solo CSS, sin frameworks, a pelo.</p>
+            <div class="stack"><span>HTML</span><span>CSS</span></div>
+            <div class="card-links">
+              <a href="https://seakerop.github.io/webResponsiveLLMM/" target="_blank" rel="noreferrer">Demo →</a>
+              <a href="https://github.com/seakerop/webResponsiveLLMM" target="_blank" rel="noreferrer">Código →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ perfil: doble faceta ═══ -->
+    <section id="perfil">
+      <h2 class="reveal"><span class="sec-num">02</span> Las dos mitades</h2>
+      <div class="split">
+        <div class="pane pane-dev reveal">
+          <h3>La técnica</h3>
+          <p>
+            Lo que toco ahora mismo: Kotlin y Android, web con JavaScript y React, y ratos de Unity.
+            Me pica el detalle — los estados vacíos, las animaciones que se sienten bien, el porqué
+            de cada pantalla. Prefiero una app pequeña y cuidada que una grande a medias.
+          </p>
+          <div class="stack">
+            <span>Kotlin</span><span>Java</span><span>HTML/CSS</span><span>JavaScript</span>
+            <span>React</span><span>Unity</span><span>Git</span><span>Firebase</span>
+          </div>
+        </div>
+        <div class="pane pane-psy reveal">
+          <h3>La humana</h3>
+          <p>
+            La psicología no es un hobby de domingo: me interesa en serio cómo decidimos, qué nos
+            frustra y qué nos engancha. Cuando diseño una pantalla, esa parte también opina —
+            y suele tener razón.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ contacto ═══ -->
+    <section id="contacto">
+      <h2 class="reveal"><span class="sec-num">03</span> Contacto</h2>
+      <p class="contact-line reveal">¿Un proyecto, unas prácticas o una peli que recomendarme? Escríbeme.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-solid" href="mailto:saldorf1994@gmail.com">Email</a>
+        <a class="btn btn-line" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Emilio Navarro · Hecho a mano, sin plantillas</p>
+  </footer>
+
+  <script>
+    // sin JS no hay animación de aparición, pero el contenido siempre se ve
+    document.documentElement.classList.add('js')
+    // aparición suave de secciones al hacer scroll
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in')),
+      { threshold: 0.12 },
+    )
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
+  </script>
 </body>
 
 </html>
