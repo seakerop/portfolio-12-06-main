@@ -154,6 +154,30 @@ h2 {
 .mini-actions .no { color: #ff5c7a; border: 1.5px solid #ff5c7a; }
 .mini-actions .yes { color: var(--mint); border: 1.5px solid var(--mint); }
 
+/* Bóveda: candado + total oculto + velas */
+.visual-vault { background: linear-gradient(140deg, #3a2b10, #241c4d); }
+.mock-vault { width: 122px; border-radius: 10px; background: #0c1020; border: 1px solid var(--line); padding: 11px; }
+.vault-head { display: flex; align-items: center; gap: 7px; }
+.vault-lock { position: relative; width: 11px; height: 9px; border-radius: 2px; background: var(--amber); flex-shrink: 0; }
+.vault-lock::before {
+  content: ''; position: absolute; left: 2px; right: 2px; top: -5px; height: 6px;
+  border: 1.5px solid var(--amber); border-bottom: 0; border-radius: 5px 5px 0 0;
+}
+.vault-total { font-size: 12px; font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.vault-total .shown { display: none; color: var(--mint); }
+.card:hover .vault-total .masked { display: none; }
+.card:hover .vault-total .shown { display: inline; }
+.vault-candles { display: flex; align-items: flex-end; gap: 5px; height: 46px; margin-top: 10px; }
+.vault-candles i { flex: 1; border-radius: 2px; background: var(--mint); position: relative; }
+.vault-candles i::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 1.5px; top: -5px; bottom: -4px; background: inherit; opacity: 0.7; }
+.vault-candles i.down { background: #ff5c7a; }
+.vault-candles i:nth-child(1) { height: 38%; }
+.vault-candles i:nth-child(2) { height: 30%; }
+.vault-candles i:nth-child(3) { height: 55%; }
+.vault-candles i:nth-child(4) { height: 72%; }
+.vault-candles i:nth-child(5) { height: 58%; }
+.vault-candles i:nth-child(6) { height: 92%; }
+
 /* Calculadora: pantalla + teclado */
 .mock-calc { width: 110px; }
 .calc-display {
