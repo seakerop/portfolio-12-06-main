@@ -222,6 +222,8 @@
         <button class="lb-close" type="button" aria-label="Cerrar">✕</button>
       </div>
       <div class="lb-track"></div>
+      <button class="lb-nav lb-prev" type="button" aria-label="Anterior">‹</button>
+      <button class="lb-nav lb-next" type="button" aria-label="Siguiente">›</button>
     </div>
   </div>
 
@@ -270,29 +272,68 @@
         ],
       },
     }
+    // la nav se vuelve píldora con blur en cuanto haces scroll
+    const navBar = document.querySelector('.nav')
+    const onScroll = () => navBar.classList.toggle('scrolled', window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+
     const lb = document.getElementById('lightbox')
     const lbTitle = lb.querySelector('.lb-title')
     const lbTrack = lb.querySelector('.lb-track')
+    let lastFocus = null
     function openGallery(key) {
       const g = GALLERIES[key]
       if (!g) return
+      lastFocus = document.activeElement
       lbTitle.innerHTML = g.title + ' <small>desliza para ver →</small>'
       lbTrack.innerHTML = g.shots
-        .map((s) => `<figure class="lb-shot"><img src="${s.src}" alt="" loading="lazy" /><p>${s.cap}</p></figure>`)
+        .map((s) => `<figure class="lb-shot"><img src="${s.src}" alt="" loading="lazy" decoding="async" /><p>${s.cap}</p></figure>`)
         .join('')
       lbTrack.scrollLeft = 0
       lb.hidden = false
       document.body.style.overflow = 'hidden'
+      lb.querySelector('.lb-close').focus({ preventScroll: true })
     }
     function closeGallery() {
-      lb.hidden = true
-      document.body.style.overflow = ''
+      if (lb.hidden || lb.classList.contains('closing')) return
+      lb.classList.add('closing')
+      setTimeout(() => {
+        lb.classList.remove('closing')
+        lb.hidden = true
+        document.body.style.overflow = ''
+        if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true })
+      }, 190)
+    }
+    // una "página" de la tira = ancho de captura + hueco
+    const stepSize = () => {
+      const shot = lbTrack.querySelector('.lb-shot')
+      return shot ? shot.getBoundingClientRect().width + 16 : 280
     }
     document.querySelectorAll('[data-shots]').forEach((b) => b.addEventListener('click', () => openGallery(b.dataset.shots)))
     lb.querySelector('.lb-close').addEventListener('click', closeGallery)
     lb.querySelector('.lb-backdrop').addEventListener('click', closeGallery)
+    lb.querySelector('.lb-prev').addEventListener('click', () => lbTrack.scrollBy({ left: -stepSize(), behavior: 'smooth' }))
+    lb.querySelector('.lb-next').addEventListener('click', () => lbTrack.scrollBy({ left: stepSize(), behavior: 'smooth' }))
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lb.hidden) closeGallery()
+      if (lb.hidden) return
+      if (e.key === 'Escape') closeGallery()
+      if (e.key === 'ArrowRight') lbTrack.scrollBy({ left: stepSize(), behavior: 'smooth' })
+      if (e.key === 'ArrowLeft') lbTrack.scrollBy({ left: -stepSize(), behavior: 'smooth' })
+    })
+    // arrastrar la tira con el ratón, como en el móvil con el dedo
+    let dragging = false, dragX = 0, dragStart = 0
+    lbTrack.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse') return
+      dragging = true; dragX = e.clientX; dragStart = lbTrack.scrollLeft
+      lbTrack.classList.add('dragging')
+    })
+    window.addEventListener('pointermove', (e) => {
+      if (dragging) lbTrack.scrollLeft = dragStart - (e.clientX - dragX)
+    })
+    window.addEventListener('pointerup', () => {
+      dragging = false
+      lbTrack.classList.remove('dragging')
     })
   </script>
 </body>
