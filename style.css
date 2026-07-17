@@ -254,3 +254,38 @@ footer { text-align: center; color: #5d6285; font-size: 13px; padding: 30px 20px
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+
+/* enlace "cómo funciona" + galería (lightbox) */
+.shots-link {
+  color: var(--amber); font-weight: 700; font-size: 14px; font-family: inherit;
+  background: none; border: 0; padding: 0; cursor: pointer;
+}
+.shots-link:hover { text-decoration: underline; }
+
+.lightbox { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; padding: 18px; }
+.lightbox[hidden] { display: none; }
+.lb-backdrop { position: absolute; inset: 0; background: rgba(6, 7, 14, 0.8); backdrop-filter: blur(6px); }
+.lb-panel {
+  position: relative; z-index: 1; width: min(940px, 100%); max-width: 100%; min-width: 0; max-height: 90vh;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  padding: 22px; display: flex; flex-direction: column; gap: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+.lb-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.lb-title { font-family: var(--display); font-size: 22px; font-weight: 800; }
+.lb-title small { margin-left: 9px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--muted); }
+.lb-close {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px; cursor: pointer;
+  background: var(--surface2); border: 1px solid var(--line); color: var(--text); font-size: 14px;
+}
+.lb-close:hover { border-color: var(--muted); }
+.lb-track {
+  display: flex; gap: 16px; min-width: 0; overflow-x: auto; overflow-y: hidden;
+  padding: 2px 2px 14px; scroll-snap-type: x mandatory;
+}
+.lb-shot { flex: 0 0 auto; width: min(74vw, 260px); scroll-snap-align: center; margin: 0; }
+.lb-shot img {
+  width: 100%; display: block; border-radius: 16px; border: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+.lb-shot p { color: var(--muted); font-size: 13.5px; line-height: 1.5; margin-top: 12px; }

@@ -144,6 +144,7 @@
               <span>React</span><span>Vite</span><span>IndexedDB</span><span>PWA</span>
             </div>
             <div class="card-links">
+              <button type="button" class="shots-link" data-shots="lifecraft">Cómo funciona →</button>
               <a href="https://github.com/seakerop/lifecraft" target="_blank" rel="noreferrer">Código →</a>
             </div>
           </div>
@@ -209,6 +210,17 @@
     </section>
   </main>
 
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="lb-backdrop"></div>
+    <div class="lb-panel" role="dialog" aria-modal="true" aria-label="Capturas del proyecto">
+      <div class="lb-head">
+        <h3 class="lb-title"></h3>
+        <button class="lb-close" type="button" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="lb-track"></div>
+    </div>
+  </div>
+
   <footer>
     <p>© 2026 Emilio Navarro · Hecho a mano, sin plantillas</p>
   </footer>
@@ -222,6 +234,44 @@
       { threshold: 0.12 },
     )
     document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
+
+    // galería "cómo funciona": capturas + explicación por proyecto
+    const GALLERIES = {
+      lifecraft: {
+        title: 'LifeCraft',
+        shots: [
+          { src: 'img/lifecraft/1-creacion.webp', cap: 'Creo mi héroe: elijo retrato y marco qué hábitos quiero cultivar y qué vicios vigilar. Solo eso aparece luego en mi barra de acciones.' },
+          { src: 'img/lifecraft/2-home.webp', cap: 'La pantalla de juego. Lanzo una habilidad y se convierte en un aura con duración real; mis atributos y mi poder suben con las auras activas, y todo queda en el registro de combate.' },
+          { src: 'img/lifecraft/3-codice.webp', cap: 'El códice: cada hábito y suplemento con su explicación fisiológica real, basada en fuentes científicas y con el aviso de que no sustituye a un profesional.' },
+          { src: 'img/lifecraft/4-misiones.webp', cap: 'Misiones diarias que dan XP extra y un jefe semanal: cada buen hábito le hace daño y cada vicio lo cura. Si cae antes del lunes, recompensa.' },
+          { src: 'img/lifecraft/5-cronica.webp', cap: 'La crónica: un mapa de calor del mes (cuanto más verde, más hábitos ese día) y los logros que voy desbloqueando.' },
+        ],
+      },
+    }
+    const lb = document.getElementById('lightbox')
+    const lbTitle = lb.querySelector('.lb-title')
+    const lbTrack = lb.querySelector('.lb-track')
+    function openGallery(key) {
+      const g = GALLERIES[key]
+      if (!g) return
+      lbTitle.innerHTML = g.title + ' <small>desliza para ver →</small>'
+      lbTrack.innerHTML = g.shots
+        .map((s) => `<figure class="lb-shot"><img src="${s.src}" alt="" loading="lazy" /><p>${s.cap}</p></figure>`)
+        .join('')
+      lbTrack.scrollLeft = 0
+      lb.hidden = false
+      document.body.style.overflow = 'hidden'
+    }
+    function closeGallery() {
+      lb.hidden = true
+      document.body.style.overflow = ''
+    }
+    document.querySelectorAll('[data-shots]').forEach((b) => b.addEventListener('click', () => openGallery(b.dataset.shots)))
+    lb.querySelector('.lb-close').addEventListener('click', closeGallery)
+    lb.querySelector('.lb-backdrop').addEventListener('click', closeGallery)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lb.hidden) closeGallery()
+    })
   </script>
 </body>
 
