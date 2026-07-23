@@ -155,6 +155,43 @@
         </article>
 
         <article class="card reveal">
+          <div class="card-visual visual-gym">
+            <div class="mock-gym">
+              <div class="gym-circle">
+                <span class="gym-suelo"></span>
+                <span class="gym-tronco"></span>
+                <span class="gym-copa"><i></i><i></i><i></i></span>
+              </div>
+              <div class="gym-panel">
+                <span class="gym-nombre"></span>
+                <span class="gym-xp"><span></span></span>
+                <span class="gym-series"><i>✓</i><i>✓</i><i class="falta">✓</i></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>FromZeroToHero</h3>
+            </div>
+            <p>
+              Voy al gimnasio de verdad, así que me construí el juego: yo soy el personaje. Cada
+              sesión da XP — el peso corporal jamás: la báscula es solo una gráfica más — y mi
+              avatar es un árbol que crece con cada día en que hago algo, vestido con la estación
+              real del calendario. En el banco veo lo que levanté la última vez, los PRs saltan
+              solos con su 1RM estimado, la racha respeta mis días de descanso y hay un logro por
+              volver tras una semana mala.
+            </p>
+            <div class="stack">
+              <span>React</span><span>IndexedDB</span><span>SVG</span><span>PWA</span>
+            </div>
+            <div class="card-links">
+              <button type="button" class="shots-link" data-shots="fzth">Cómo funciona →</button>
+              <a href="https://github.com/seakerop/fromzerotohero" target="_blank" rel="noreferrer">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
           <div class="card-visual visual-unity">
             <div class="mock-fps">
               <span class="cross"></span>
@@ -243,6 +280,15 @@
 
     // galería "cómo funciona": capturas + explicación por proyecto
     const GALLERIES = {
+      fzth: {
+        title: 'FromZeroToHero',
+        shots: [
+          { src: 'img/fzth/01-home.webp', cap: 'La ficha del héroe: etapa del viaje, nivel y atributos que salen de lo que hago — nunca de lo que peso. El árbol es mi avatar: crece con los días en que entreno, camino o registro, y jamás retrocede.' },
+          { src: 'img/fzth/02-arbol.webp', cap: 'Al tocarlo se abre su ficha con la crónica: cada pocos días de acción aparece algo nuevo — una raíz, una hoja, un nido — y la estación real del calendario lo viste. Si algo cambió desde mi última visita, me lo susurra al abrir la app.' },
+          { src: 'img/fzth/03-progreso.webp', cap: 'Cada punto es una sesión: mejor peso y 1RM estimado por ejercicio. Los PRs se detectan solos, y la primera vez con un ejercicio solo pone el listón — no hay récord regalado.' },
+          { src: 'img/fzth/04-entreno.webp', cap: 'El modo entreno, pensado para usarlo en el banco: cada ejercicio me enseña lo que levanté la última vez y prellena las series con ello. Botones grandes y temporizador de descanso.' },
+        ],
+      },
       lifecraft: {
         title: 'LifeCraft',
         shots: [
