@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090f" />
+  <title>Emilio Navarro · Developer and Psychology graduate</title>
+  <meta name="description"
+    content="Portfolio of Emilio Navarro, application developer and Psychology graduate. Personal finance and habit-tracking apps, and data analysis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seakerop.github.io/portfolio-12-06-main/en/" />
+  <meta property="og:title" content="Emilio Navarro · Developer and Psychology graduate" />
+  <meta property="og:description" content="Personal finance and habit-tracking apps, and data analysis." />
+  <meta property="og:image" content="https://seakerop.github.io/portfolio-12-06-main/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2308090f'/%3E%3Ctext x='46' y='68' font-family='Arial' font-weight='800' font-size='50' fill='%23f4f2fb' text-anchor='middle'%3EEN%3C/text%3E%3Ccircle cx='82' cy='64' r='7' fill='%23ffb43a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="alternate" hreflang="es" href="https://seakerop.github.io/portfolio-12-06-main/" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Home">EN<span class="dot">.</span></a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#profile">Profile</a>
+      <a href="#contact">Contact</a>
+      <a class="lang-link" href="../" hreflang="es" lang="es">Español</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ═══ hero ═══ -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Developer · Psychology graduate</p>
+        <h1 class="reveal">Emilio Navarro<span class="dot">.</span></h1>
+        <p class="hero-sub reveal">
+          I build personal finance and habit-tracking applications and work on data analysis. Higher vocational
+          diploma in Cross-Platform Application Development and a degree in Psychology.
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-solid" href="#projects">View projects</a>
+          <a class="btn btn-line" href="mailto:saldorf1994@gmail.com">Contact</a>
+          <a class="btn btn-ghost" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <ul class="proof reveal" aria-label="In numbers">
+          <li><b>5</b><span>published projects</span></li>
+          <li><b>4</b><span>with a live demo</span></li>
+          <li><b>C2</b><span>English</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-phones reveal" aria-hidden="true">
+        <figure class="phone p-back"><img src="../img/boveda/2-activo.webp" alt="" fetchpriority="high" /></figure>
+        <figure class="phone p-front"><img src="../img/vigia/1-avisos.webp" alt="" fetchpriority="high" /></figure>
+        <figure class="phone p-side"><img src="../img/fzth/1-home.webp" alt="" /></figure>
+      </div>
+    </section>
+
+    <!-- ═══ projects ═══ -->
+    <section id="projects">
+      <div class="sec-head reveal">
+        <span class="sec-num mono">01</span>
+        <h2>Projects</h2>
+        <p>Applications and data analysis, designed and built end to end. The app interfaces are in Spanish.</p>
+      </div>
+
+      <!-- featured: Vigía -->
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="card-top">
+            <h3>Vigía</h3>
+            <span class="badge badge-new">New</span>
+          </div>
+          <p class="lede">Market alerts with historical context.</p>
+          <p>
+            Lets you set alerts on a watchlist, for example when Bitcoin's RSI drops below 30. Before each rule is
+            saved, it is tested against the asset's history: how many times it would have fired and how the price
+            moved over the following 5, 10 and 30 days compared with the average. That summary is shown with every
+            alert.
+          </p>
+          <ul class="checks">
+            <li>Backtest over the full history using the same logic as the live alerts</li>
+            <li>Binomial test on independent cases and a separate analysis of the last three years</li>
+            <li>For Bitcoin, the current phase of the halving cycle with data from previous cycles</li>
+          </ul>
+          <div class="stack">
+            <span>React</span><span>Vite</span><span>Statistics</span><span>Binance and Yahoo</span><span>Vitest</span><span>PWA</span>
+          </div>
+          <div class="card-links">
+            <a class="link-solid" href="https://vigia-fawn.vercel.app" target="_blank" rel="noreferrer">Live demo ↗</a>
+            <button type="button" class="shots-link" data-shots="vigia">Screenshots →</button>
+            <a href="https://github.com/seakerop/vigia" target="_blank" rel="noreferrer">Code →</a>
+          </div>
+        </div>
+        <div class="feature-visual" aria-hidden="true">
+          <figure class="phone"><img src="../img/vigia/3-probador.webp" alt="" loading="lazy" /></figure>
+          <figure class="phone phone-offset"><img src="../img/vigia/2-ficha.webp" alt="" loading="lazy" /></figure>
+        </div>
+      </article>
+
+      <!-- featured: Termómetro -->
+      <article class="feature feature-data reveal">
+        <div class="feature-text">
+          <div class="card-top">
+            <h3>Thermometer</h3>
+            <span class="tag mono">Data analysis</span>
+          </div>
+          <p class="lede">Do investment indicators anticipate future returns?</p>
+          <p>
+            A study of 26 technical, sentiment, valuation and macroeconomic indicators against almost a century of
+            S&amp;P 500 data, and of 28 against the history of Bitcoin, at horizons from one day to ten years. Each
+            data point is used only from its publication date, and the zones of each indicator are computed without
+            later information.
+          </p>
+          <ul class="checks">
+            <li>Block bootstrap and Benjamini-Hochberg correction for multiple comparisons</li>
+            <li>Validation on independent periods and control for the time trend</li>
+            <li>Interactive reports in English and Spanish generated from the results</li>
+          </ul>
+          <div class="stack">
+            <span>Node.js</span><span>Statistics</span><span>FRED</span><span>Yahoo Finance</span><span>CoinMetrics</span><span>Shiller data</span>
+          </div>
+          <div class="card-links">
+            <a class="link-solid" href="https://seakerop.github.io/termometro/en/" target="_blank" rel="noreferrer">S&amp;P 500 report ↗</a>
+            <a href="https://seakerop.github.io/termometro/en/bitcoin.html" target="_blank" rel="noreferrer">Bitcoin report ↗</a>
+            <a href="https://github.com/seakerop/termometro" target="_blank" rel="noreferrer">Code →</a>
+          </div>
+        </div>
+        <div class="feature-visual" aria-hidden="true">
+          <figure class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <img src="../img/termometro/mapa.webp" alt="" loading="lazy" width="758" height="572" />
+          </figure>
+        </div>
+      </article>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-shot shot-vault">
+            <figure class="phone"><img src="../img/boveda/2-activo.webp" alt="Bitcoin detail screen in Bóveda with its candlestick chart" loading="lazy" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><h3>Bóveda</h3><span class="tag mono">Finance</span></div>
+            <p>
+              Personal wealth tracker (crypto, stocks and property) that calculates net worth after deducting the
+              mortgage month by month and includes an early-repayment simulator. Data is encrypted on the device, with
+              biometric unlock and an alternative password that shows a decoy portfolio.
+            </p>
+            <div class="stack"><span>React</span><span>Web Crypto</span><span>WebAuthn</span><span>IndexedDB</span></div>
+            <div class="card-links">
+              <a href="https://boveda-ivory.vercel.app" target="_blank" rel="noreferrer">Demo ↗</a>
+              <button type="button" class="shots-link" data-shots="boveda">Screenshots →</button>
+              <a href="https://github.com/seakerop/boveda" target="_blank" rel="noreferrer">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-shot shot-gym">
+            <figure class="phone"><img src="../img/fzth/1-home.webp" alt="FromZeroToHero home screen" loading="lazy" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><h3>FromZeroToHero</h3><span class="tag mono">Habits</span></div>
+            <p>
+              Workout tracking with game mechanics: each session earns experience and progress is shown as a tree
+              that grows with active days. It shows the loads from the previous session, detects personal records and
+              produces a weekly summary to share. Body weight does not score.
+            </p>
+            <div class="stack"><span>React</span><span>IndexedDB</span><span>SVG</span><span>PWA</span></div>
+            <div class="card-links">
+              <a href="https://seakerop.github.io/fromzerotohero/" target="_blank" rel="noreferrer">Demo ↗</a>
+              <button type="button" class="shots-link" data-shots="fzth">Screenshots →</button>
+              <a href="https://github.com/seakerop/fromzerotohero" target="_blank" rel="noreferrer">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-shot shot-life">
+            <figure class="phone"><img src="../img/lifecraft/2-home.webp" alt="LifeCraft home screen" loading="lazy" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><h3>LifeCraft</h3><span class="tag mono">Habits</span></div>
+            <p>
+              Habit tracking framed as a role-playing game: each habit applies a temporary effect to the character's
+              attributes. Includes daily quests, a weekly goal and information cards on the physiological effect of
+              each habit.
+            </p>
+            <div class="stack"><span>React</span><span>Vite</span><span>IndexedDB</span><span>PWA</span></div>
+            <div class="card-links">
+              <button type="button" class="shots-link" data-shots="lifecraft">Screenshots →</button>
+              <a href="https://github.com/seakerop/lifecraft" target="_blank" rel="noreferrer">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-shot shot-cine">
+            <figure class="phone"><img src="../img/cinematch/3-swipe.webp" alt="Film catalogue in CineMatch" loading="lazy" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><h3>CineMatch</h3><span class="badge badge-wip">In progress</span></div>
+            <p>
+              An app for choosing a film as a group: everyone rates the same catalogue on their own phone and the app
+              shows the matches. Real-time sessions across devices and a TMDB catalogue filtered by platform, running
+              time and titles already watched.
+            </p>
+            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>PWA</span></div>
+            <div class="card-links">
+              <button type="button" class="shots-link" data-shots="cinematch">Screenshots →</button>
+              <span class="soon">Demo coming soon</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ profile ═══ -->
+    <section id="profile">
+      <div class="sec-head reveal">
+        <span class="sec-num mono">02</span>
+        <h2>Profile</h2>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar reveal">
+          <span class="pillar-k mono">Product</span>
+          <h3>Application development</h3>
+          <p>Complete, maintained applications: offline support, error handling and automated tests.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-k mono">Data</span>
+          <h3>Data analysis</h3>
+          <p>Testing hypotheses with data: correlations, bootstrap and correction for multiple comparisons.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-k mono">People</span>
+          <h3>Applied psychology</h3>
+          <p>Psychology applied to design: motivation, decision-making and user experience.</p>
+        </div>
+      </div>
+
+      <div class="cv-grid">
+        <div class="cv-block reveal">
+          <h3 class="block-title">Experience</h3>
+          <ul class="cv-list">
+            <li>
+              <div class="cv-head"><b>Independent application development</b><span class="when mono">2025 – present</span></div>
+              <p>Design and development of five personal finance, habit and leisure applications and a statistical study of investment indicators; five projects published as open source. Automated tests and deployment on Vercel and GitHub Pages.</p>
+            </li>
+            <li>
+              <div class="cv-head"><b>RPA development internship</b><span class="when mono">2025</span></div>
+              <span class="org">NEORIS</span>
+              <p>Building automation robots with UiPath in a consulting team: process analysis, development, testing and technical documentation.</p>
+            </li>
+            <li>
+              <div class="cv-head"><b>Management of a personal investment portfolio</b><span class="when mono">2017 – present</span></div>
+              <p>Analysis and valuation of companies and financial assets, and portfolio risk management.</p>
+            </li>
+            <li>
+              <div class="cv-head"><b>Humanitarian aid team leader</b><span class="when mono">2019 – 2021</span></div>
+              <span class="org">YWAM · United States</span>
+              <p>Coordinating volunteers in multicultural teams: planning, assigning responsibilities and tracking goals.</p>
+            </li>
+            <li>
+              <div class="cv-head"><b>Internship in equine-assisted therapy</b><span class="when mono">2017 – 2018</span></div>
+              <span class="org">TerapiaAnimal</span>
+              <p>Work with people with disabilities.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv-side">
+          <div class="cv-block reveal">
+            <h3 class="block-title">Education</h3>
+            <ul class="cv-list">
+              <li>
+                <div class="cv-head"><b>Bachelor's degree in Psychology</b><span class="when mono">2026</span></div>
+                <span class="org">Universidad Internacional de La Rioja (UNIR)</span>
+                <p>Final thesis on financial literacy and well-being. <a href="https://reunir.unir.net/handle/123456789/23557" target="_blank" rel="noreferrer">Published in Re-UNIR ↗</a></p>
+              </li>
+              <li>
+                <div class="cv-head"><b>Higher vocational diploma in Cross-Platform Application Development</b><span class="when mono">2026</span></div>
+                <span class="org">Universidad Internacional de La Rioja (UNIR)</span>
+              </li>
+              <li>
+                <div class="cv-head"><b>Automation Developer Professional</b></div>
+                <span class="org">UiPath Academy certification</span>
+              </li>
+            </ul>
+          </div>
+          <div class="cv-block reveal">
+            <h3 class="block-title">Languages</h3>
+            <p class="lang"><b>Spanish</b> native</p>
+            <p class="lang"><b>English</b> C2 · Certificate of Proficiency in English, Cambridge (2021)</p>
+          </div>
+        </div>
+
+        <div class="cv-block cv-wide reveal">
+          <h3 class="block-title">Technologies</h3>
+          <div class="stack">
+            <span>JavaScript</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>Java</span><span>Kotlin</span>
+            <span>SQL</span><span>PL/SQL</span><span>MongoDB</span><span>Firebase</span><span>IndexedDB</span><span>Vitest and Jest</span><span>Git</span><span>UiPath</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ contact ═══ -->
+    <section id="contact">
+      <div class="contact reveal">
+        <span class="sec-num mono">03</span>
+        <h2>Contact</h2>
+        <p>Open to opportunities in product, data or development teams.</p>
+        <a class="mail" href="mailto:saldorf1994@gmail.com">saldorf1994@gmail.com</a>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="mailto:saldorf1994@gmail.com">Send an email</a>
+          <a class="btn btn-line" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="lb-backdrop"></div>
+    <div class="lb-panel" role="dialog" aria-modal="true" aria-label="Project screenshots">
+      <div class="lb-head">
+        <h3 class="lb-title"></h3>
+        <button class="lb-close" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="lb-track"></div>
+      <button class="lb-nav lb-prev" type="button" aria-label="Previous">‹</button>
+      <button class="lb-nav lb-next" type="button" aria-label="Next">›</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Emilio Navarro</p>
+  </footer>
+
+  <script>
+    // without JS there is no fade-in, but the content is always visible
+    document.documentElement.classList.add('js')
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in')),
+      { threshold: 0.12 },
+    )
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
+
+    // screenshot gallery with a caption per screen
+    const GALLERIES = {
+      vigia: {
+        title: 'Vigía',
+        shots: [
+          { src: '../img/vigia/1-avisos.webp', cap: 'Watchlist with an active alert. Next to the rule is its historical summary: how many times it would have fired since 2017 and the 10-day price move compared with the average.' },
+          { src: '../img/vigia/2-ficha.webp', cap: 'Detail screen for each asset with candles and RSI, computed with the same code that evaluates the rules.' },
+          { src: '../img/vigia/3-probador.webp', cap: 'When a rule is created, the app tests it against the asset\'s history and shows the results at 5, 10 and 30 days against the average, with an indication of whether the difference is significant.' },
+          { src: '../img/vigia/4-ciclo.webp', cap: 'For Bitcoin, the current phase of the halving cycle and how the price behaved in that phase during previous cycles. Below, each rule with its historical summary.' },
+        ],
+      },
+      fzth: {
+        title: 'FromZeroToHero',
+        shots: [
+          { src: '../img/fzth/1-home.webp', cap: 'Home screen: level, attributes and the tree that represents progress, which grows with active days. Attributes are calculated from logged activity, never from body weight.' },
+          { src: '../img/fzth/2-arbol.webp', cap: 'The tree in detail with its history: every few active days a new element is added, and its appearance changes with the season.' },
+          { src: '../img/fzth/3-entreno.webp', cap: 'Workout mode: each exercise shows the loads from the previous session and pre-fills the sets. Includes a rest timer.' },
+          { src: '../img/fzth/4-ficha.webp', cap: 'Technique cards for 52 exercises: muscles involved, key points and common mistakes.' },
+          { src: '../img/fzth/5-progreso.webp', cap: 'Progress per exercise: best weight and estimated 1RM per session, with automatic detection of personal records.' },
+          { src: '../img/fzth/6-gesta.webp', cap: 'Weekly summary as an image to share: level, streak and experience for the week.' },
+        ],
+      },
+      lifecraft: {
+        title: 'LifeCraft',
+        shots: [
+          { src: '../img/lifecraft/1-creacion.webp', cap: 'Character creation: choosing the habits to build and the ones to keep under control.' },
+          { src: '../img/lifecraft/2-home.webp', cap: 'Home screen: each logged habit applies a temporary effect that changes the character\'s attributes.' },
+          { src: '../img/lifecraft/3-codice.webp', cap: 'Information cards on the physiological effect of each habit, with references and a note that they do not replace professional advice.' },
+          { src: '../img/lifecraft/4-misiones.webp', cap: 'Daily quests and a weekly goal that moves forward with positive habits and back with negative ones.' },
+          { src: '../img/lifecraft/5-cronica.webp', cap: 'Monthly history as a heat map, and unlocked achievements.' },
+        ],
+      },
+      boveda: {
+        title: 'Bóveda',
+        shots: [
+          { src: '../img/boveda/1-patrimonio.webp', cap: 'Wealth summary by asset type, with net worth after the mortgage.' },
+          { src: '../img/boveda/2-activo.webp', cap: 'Detail screen for each asset with a weekly candlestick chart. Crypto and stock prices update automatically.' },
+          { src: '../img/boveda/3-hipoteca.webp', cap: 'Early-repayment simulator: compares lowering the monthly payment with shortening the term and calculates the interest saved.' },
+          { src: '../img/boveda/4-privacidad.webp', cap: 'Privacy mode: hides every figure with one tap.' },
+        ],
+      },
+      cinematch: {
+        title: 'CineMatch',
+        shots: [
+          { src: '../img/cinematch/1-inicio.webp', cap: 'Three modes: a session between two phones with a code, joining an existing session, or a single phone taking turns.' },
+          { src: '../img/cinematch/2-setup.webp', cap: 'Session setup: platforms, content type, year, maximum running time and number of titles.' },
+          { src: '../img/cinematch/3-swipe.webp', cap: 'Each participant rates the titles in the catalogue. Data and posters come from TMDB.' },
+          { src: '../img/cinematch/4-match.webp', cap: 'Result: the titles everyone liked.' },
+        ],
+      },
+    }
+    const navBar = document.querySelector('.nav')
+    const onScroll = () => navBar.classList.toggle('scrolled', window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+
+    const lb = document.getElementById('lightbox')
+    const lbTitle = lb.querySelector('.lb-title')
+    const lbTrack = lb.querySelector('.lb-track')
+    let lastFocus = null
+    function openGallery(key) {
+      const g = GALLERIES[key]
+      if (!g) return
+      lastFocus = document.activeElement
+      lbTitle.innerHTML = g.title + ' <small>swipe for more →</small>'
+      lbTrack.innerHTML = g.shots
+        .map((s) => `<figure class="lb-shot"><img src="${s.src}" alt="" loading="lazy" decoding="async" /><p>${s.cap}</p></figure>`)
+        .join('')
+      lbTrack.scrollLeft = 0
+      lb.hidden = false
+      document.body.style.overflow = 'hidden'
+      lb.querySelector('.lb-close').focus({ preventScroll: true })
+    }
+    function closeGallery() {
+      if (lb.hidden || lb.classList.contains('closing')) return
+      lb.classList.add('closing')
+      setTimeout(() => {
+        lb.classList.remove('closing')
+        lb.hidden = true
+        document.body.style.overflow = ''
+        if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true })
+      }, 190)
+    }
+    const stepSize = () => {
+      const shot = lbTrack.querySelector('.lb-shot')
+      return shot ? shot.getBoundingClientRect().width + 16 : 280
+    }
+    document.querySelectorAll('[data-shots]').forEach((b) => b.addEventListener('click', () => openGallery(b.dataset.shots)))
+    lb.querySelector('.lb-close').addEventListener('click', closeGallery)
+    lb.querySelector('.lb-backdrop').addEventListener('click', closeGallery)
+    lb.querySelector('.lb-prev').addEventListener('click', () => lbTrack.scrollBy({ left: -stepSize(), behavior: 'smooth' }))
+    lb.querySelector('.lb-next').addEventListener('click', () => lbTrack.scrollBy({ left: stepSize(), behavior: 'smooth' }))
+    document.addEventListener('keydown', (e) => {
+      if (lb.hidden) return
+      if (e.key === 'Escape') closeGallery()
+      if (e.key === 'ArrowRight') lbTrack.scrollBy({ left: stepSize(), behavior: 'smooth' })
+      if (e.key === 'ArrowLeft') lbTrack.scrollBy({ left: -stepSize(), behavior: 'smooth' })
+    })
+    let dragging = false, dragX = 0, dragStart = 0
+    lbTrack.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse') return
+      dragging = true; dragX = e.clientX; dragStart = lbTrack.scrollLeft
+      lbTrack.classList.add('dragging')
+    })
+    window.addEventListener('pointermove', (e) => {
+      if (dragging) lbTrack.scrollLeft = dragStart - (e.clientX - dragX)
+    })
+    window.addEventListener('pointerup', () => {
+      dragging = false
+      lbTrack.classList.remove('dragging')
+    })
+  </script>
+</body>
+
+</html>

@@ -7,11 +7,11 @@
   <meta name="theme-color" content="#08090f" />
   <title>Emilio Navarro · Desarrollador y graduado en Psicología</title>
   <meta name="description"
-    content="Portfolio de Emilio Navarro, desarrollador de aplicaciones (DAM) y graduado en Psicología. Aplicaciones de finanzas personales, hábitos y análisis de datos." />
+    content="Portfolio de Emilio Navarro, desarrollador de aplicaciones (DAM) y graduado en Psicología. Aplicaciones de finanzas personales y hábitos, y análisis de datos." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://seakerop.github.io/portfolio-12-06-main/" />
   <meta property="og:title" content="Emilio Navarro · Desarrollador y graduado en Psicología" />
-  <meta property="og:description" content="Aplicaciones de finanzas personales, hábitos y análisis de datos." />
+  <meta property="og:description" content="Aplicaciones de finanzas personales y hábitos, y análisis de datos." />
   <meta property="og:image" content="https://seakerop.github.io/portfolio-12-06-main/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon"
@@ -21,6 +21,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
     rel="stylesheet" />
+  <link rel="alternate" hreflang="en" href="https://seakerop.github.io/portfolio-12-06-main/en/" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -33,6 +34,7 @@
       <a href="#proyectos">Proyectos</a>
       <a href="#perfil">Perfil</a>
       <a href="#contacto">Contacto</a>
+      <a class="lang-link" href="en/" hreflang="en" lang="en">English</a>
     </nav>
   </header>
 
@@ -52,8 +54,8 @@
           <a class="btn btn-ghost" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
         <ul class="proof reveal" aria-label="En cifras">
-          <li><b>4</b><span>aplicaciones publicadas</span></li>
-          <li><b>3</b><span>con demo en vivo</span></li>
+          <li><b>5</b><span>proyectos publicados</span></li>
+          <li><b>4</b><span>con demo en vivo</span></li>
           <li><b>C2</b><span>de inglés</span></li>
         </ul>
       </div>
@@ -65,14 +67,12 @@
       </div>
     </section>
 
-    <p class="now reveal"><span class="pulse"></span> Actualmente: estudio sobre la capacidad predictiva de los indicadores de inversión más usados en bolsa y en Bitcoin.</p>
-
     <!-- ═══ proyectos ═══ -->
     <section id="proyectos">
       <div class="sec-head reveal">
         <span class="sec-num mono">01</span>
         <h2>Proyectos</h2>
-        <p>Aplicaciones diseñadas y desarrolladas de principio a fin, que uso y mantengo.</p>
+        <p>Aplicaciones y análisis de datos diseñados y desarrollados de principio a fin.</p>
       </div>
 
       <!-- destacado: Vigía -->
@@ -105,6 +105,42 @@
         <div class="feature-visual" aria-hidden="true">
           <figure class="phone"><img src="img/vigia/3-probador.webp" alt="" loading="lazy" /></figure>
           <figure class="phone phone-offset"><img src="img/vigia/2-ficha.webp" alt="" loading="lazy" /></figure>
+        </div>
+      </article>
+
+      <!-- destacado: Termómetro -->
+      <article class="feature feature-data reveal">
+        <div class="feature-text">
+          <div class="card-top">
+            <h3>Termómetro</h3>
+            <span class="tag mono">Análisis de datos</span>
+          </div>
+          <p class="lede">¿Anticipan los indicadores de inversión la rentabilidad futura?</p>
+          <p>
+            Estudio de 26 indicadores técnicos, de sentimiento, de valoración y macroeconómicos frente a casi un siglo
+            de datos del S&amp;P 500, y de 28 frente a la historia de Bitcoin, a horizontes de un día a diez años. Cada
+            dato se utiliza solo desde su fecha de publicación y las zonas de cada indicador se calculan sin
+            información posterior.
+          </p>
+          <ul class="checks">
+            <li>Bootstrap por bloques y corrección de Benjamini-Hochberg por comparaciones múltiples</li>
+            <li>Validación con periodos independientes y control de la tendencia temporal</li>
+            <li>Informes interactivos en español e inglés generados a partir de los resultados</li>
+          </ul>
+          <div class="stack">
+            <span>Node.js</span><span>Estadística</span><span>FRED</span><span>Yahoo Finance</span><span>CoinMetrics</span><span>Datos de Shiller</span>
+          </div>
+          <div class="card-links">
+            <a class="link-solid" href="https://seakerop.github.io/termometro/" target="_blank" rel="noreferrer">Informe S&amp;P 500 ↗</a>
+            <a href="https://seakerop.github.io/termometro/bitcoin.html" target="_blank" rel="noreferrer">Informe Bitcoin ↗</a>
+            <a href="https://github.com/seakerop/termometro" target="_blank" rel="noreferrer">Código →</a>
+          </div>
+        </div>
+        <div class="feature-visual" aria-hidden="true">
+          <figure class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <img src="img/termometro/mapa.webp" alt="" loading="lazy" width="758" height="572" />
+          </figure>
         </div>
       </article>
 
@@ -220,7 +256,7 @@
           <ul class="cv-list">
             <li>
               <div class="cv-head"><b>Desarrollo de aplicaciones propias</b><span class="when mono">2025 – actualidad</span></div>
-              <p>Diseño, desarrollo y publicación de cinco aplicaciones de finanzas personales, hábitos y ocio, cuatro de ellas publicadas con código abierto y tres con demo en vivo. Pruebas automáticas y publicación en Vercel y GitHub Pages.</p>
+              <p>Diseño y desarrollo de cinco aplicaciones de finanzas personales, hábitos y ocio y de un estudio estadístico sobre indicadores de inversión; cinco proyectos publicados con código abierto. Pruebas automáticas y publicación en Vercel y GitHub Pages.</p>
             </li>
             <li>
               <div class="cv-head"><b>Prácticas de desarrollo RPA</b><span class="when mono">2025</span></div>
