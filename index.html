@@ -4,29 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b0d16" />
-  <title>Emilio Navarro — Desarrollo & Psicología</title>
+  <meta name="theme-color" content="#08090f" />
+  <title>Emilio Navarro · Desarrollo, datos y psicología</title>
   <meta name="description"
-    content="Portfolio de Emilio Navarro: desarrollo de aplicaciones multiplataforma (DAM) y psicología. Proyectos en Kotlin, React y Unity." />
-  <meta property="og:title" content="Emilio Navarro — Desarrollo & Psicología" />
-  <meta property="og:description" content="Apps que entienden un poco mejor a quien las usa." />
+    content="Emilio Navarro: desarrollador (DAM) y graduado en Psicología. Construyo herramientas para decidir mejor: finanzas personales, hábitos y datos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seakerop.github.io/portfolio-12-06-main/" />
+  <meta property="og:title" content="Emilio Navarro · Desarrollo, datos y psicología" />
+  <meta property="og:description" content="Herramientas para decidir mejor: finanzas personales, hábitos y datos." />
+  <meta property="og:image" content="https://seakerop.github.io/portfolio-12-06-main/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b0d16'/%3E%3Ctext x='50' y='70' font-family='Arial' font-weight='800' font-size='52' fill='%23ffb43a' text-anchor='middle'%3EEN%3C/text%3E%3C/svg%3E" />
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2308090f'/%3E%3Ctext x='46' y='68' font-family='Arial' font-weight='800' font-size='50' fill='%23f4f2fb' text-anchor='middle'%3EEN%3C/text%3E%3Ccircle cx='82' cy='64' r='7' fill='%23ffb43a'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="glow glow-a"></div>
-  <div class="glow glow-b"></div>
-  <div class="grain"></div>
+  <div class="backdrop" aria-hidden="true"></div>
 
   <header class="nav">
-    <span class="brand">EN<span class="dot">.</span></span>
+    <a class="brand" href="#top" aria-label="Inicio">EN<span class="dot">.</span></a>
     <nav>
       <a href="#proyectos">Proyectos</a>
       <a href="#perfil">Perfil</a>
@@ -34,121 +36,135 @@
     </nav>
   </header>
 
-  <main>
+  <main id="top">
     <!-- ═══ hero ═══ -->
     <section class="hero">
-      <p class="hero-hi reveal">Hola, soy</p>
-      <h1 class="reveal">Emilio<br />Navarro<span class="dot">.</span></h1>
-      <p class="hero-sub reveal">
-        Estudio <b class="dev">desarrollo de aplicaciones</b> y también <b class="psy">psicología</b>.
-        Un combo raro hasta que ves lo que sale: apps que entienden un poco mejor a quien las usa.
-      </p>
-      <p class="now reveal"><span class="pulse"></span> Ahora mismo: puliendo CineMatch, una app para elegir peli en pareja</p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-solid" href="#proyectos">Ver proyectos ↓</a>
-        <a class="btn btn-line" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub</a>
+      <div class="hero-text">
+        <p class="eyebrow reveal">Emilio Navarro · Desarrollador y graduado en Psicología</p>
+        <h1 class="reveal">Construyo herramientas para <span class="hl">decidir mejor</span><span class="dot">.</span></h1>
+        <p class="hero-sub reveal">
+          Apps de finanzas personales, hábitos y datos. Las programo como desarrollador y las pienso como psicólogo:
+          qué necesita saber quien las usa, y qué número le está engañando.
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-solid" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-line" href="mailto:saldorf1994@gmail.com">Escríbeme</a>
+          <a class="btn btn-ghost" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <ul class="proof reveal" aria-label="En cifras">
+          <li><b>4</b><span>apps publicadas</span></li>
+          <li><b>3</b><span>con demo en vivo</span></li>
+          <li><b>9,9</b><span>en el TFG de Psicología</span></li>
+          <li><b>C2</b><span>de inglés</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-phones reveal" aria-hidden="true">
+        <figure class="phone p-back"><img src="img/boveda/2-activo.webp" alt="" fetchpriority="high" /></figure>
+        <figure class="phone p-front"><img src="img/vigia/1-avisos.webp" alt="" fetchpriority="high" /></figure>
+        <figure class="phone p-side"><img src="img/fzth/1-home.webp" alt="" /></figure>
+        <span class="float-chip chip-a"><i class="led"></i> Demo en vivo</span>
+        <span class="float-chip chip-b mono">36 tests · PWA</span>
       </div>
     </section>
 
+    <p class="now reveal"><span class="pulse"></span> Ahora mismo: midiendo con cien años de datos qué indicadores de bolsa y de Bitcoin predicen algo de verdad. Spoiler: casi ninguno.</p>
+
     <!-- ═══ proyectos ═══ -->
     <section id="proyectos">
-      <h2 class="reveal"><span class="sec-num">01</span> Proyectos</h2>
+      <div class="sec-head reveal">
+        <span class="sec-num mono">01</span>
+        <h2>Proyectos</h2>
+        <p>Todo lo hago para usarlo yo. Por eso están vivos: siguen cambiando cada vez que algo me molesta.</p>
+      </div>
+
+      <!-- destacado: Vigía -->
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="card-top">
+            <h3>Vigía</h3>
+            <span class="badge badge-new">Nuevo</span>
+          </div>
+          <p class="lede">Alertas de mercado que te cuentan qué pasó las otras veces.</p>
+          <p>
+            Pongo umbrales sobre mi watchlist ("avísame si el RSI de Bitcoin baja de 30") y Vigía me avisa. Lo
+            distinto es que antes de guardar la regla la prueba contra años de historia de ese activo: cuántas veces
+            habría saltado y qué hizo el precio 5, 10 y 30 días después, frente a lo normal. Descubrí que muchas
+            señales clásicas no significan lo que se cree, así que la app lo dice en cada aviso.
+          </p>
+          <ul class="checks">
+            <li>Repite la historia vela a vela con la misma lógica que los avisos reales</li>
+            <li>Prueba binomial con casos independientes y una mirada aparte a los últimos tres años</li>
+            <li>En Bitcoin, la fase del ciclo del halving con los datos de los ciclos anteriores</li>
+          </ul>
+          <div class="stack">
+            <span>React</span><span>Vite</span><span>Estadística</span><span>Binance y Yahoo</span><span>Vitest</span><span>PWA</span>
+          </div>
+          <div class="card-links">
+            <a class="link-solid" href="https://vigia-fawn.vercel.app" target="_blank" rel="noreferrer">Abrir la demo ↗</a>
+            <button type="button" class="shots-link" data-shots="vigia">Cómo funciona →</button>
+            <a href="https://github.com/seakerop/vigia" target="_blank" rel="noreferrer">Código →</a>
+          </div>
+        </div>
+        <div class="feature-visual" aria-hidden="true">
+          <figure class="phone"><img src="img/vigia/3-probador.webp" alt="" loading="lazy" /></figure>
+          <figure class="phone phone-offset"><img src="img/vigia/2-ficha.webp" alt="" loading="lazy" /></figure>
+        </div>
+      </article>
 
       <div class="cards">
-        <article class="card featured reveal">
-          <div class="card-visual visual-cine">
-            <div class="mock-swipe">
-              <div class="mini-card back"></div>
-              <div class="mini-card front">
-                <span class="mini-stamp">ME GUSTA</span>
-                <i class="mini-poster"></i>
-                <i class="mini-line"></i>
-                <i class="mini-line short"></i>
-              </div>
-              <div class="mini-actions"><i class="no">✕</i><i class="yes">♥</i></div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-top">
-              <h3>CineMatch</h3>
-              <span class="badge badge-wip">En desarrollo</span>
-            </div>
-            <p>
-              En casa tardábamos más en elegir peli que en verla, así que construí la solución:
-              cada uno desliza en su móvil sobre el mismo mazo y cuando los dos decimos que sí, match.
-              Tiempo real entre dispositivos con código de sesión, catálogo de TMDB filtrado por
-              plataforma, mood y duración, y memoria de lo que ya hemos visto para que no vuelva a salir.
-            </p>
-            <div class="stack">
-              <span>React</span><span>Vite</span><span>Firebase</span><span>TMDB API</span><span>PWA</span>
-            </div>
-            <div class="card-links">
-              <button type="button" class="shots-link" data-shots="cinematch">Cómo funciona →</button>
-              <span class="soon">Demo en vivo muy pronto</span>
-            </div>
-          </div>
-        </article>
-
         <article class="card reveal">
-          <div class="card-visual visual-vault">
-            <div class="mock-vault">
-              <div class="vault-head">
-                <i class="vault-lock"></i>
-                <span class="vault-total"><span class="masked">€ ••••••</span><span class="shown">€ 84.560</span></span>
-              </div>
-              <div class="vault-candles">
-                <i></i><i class="down"></i><i></i><i></i><i class="down"></i><i></i>
-              </div>
-            </div>
+          <div class="card-shot shot-vault">
+            <figure class="phone"><img src="img/boveda/2-activo.webp" alt="Ficha de Bitcoin en Bóveda con su gráfica de velas" loading="lazy" /></figure>
           </div>
           <div class="card-body">
-            <div class="card-top">
-              <h3>Bóveda</h3>
-            </div>
+            <div class="card-top"><h3>Bóveda</h3><span class="tag mono">Finanzas</span></div>
             <p>
-              Todo mi patrimonio en una pantalla — crypto, bolsa, el piso — pero calculando el neto
-              de verdad: doy de alta la hipoteca (fija o variable con euríbor) y va descontando sola
-              el capital que pago cada mes. Trae un simulador que compara amortizar bajando cuota o
-              bajando plazo y te dice cuánto ahorras en intereses. Y va cifrada entera en el
-              dispositivo: se desbloquea con huella (WebAuthn), tiene contraseña señuelo que abre
-              una cartera falsa y modo para tapar las cifras en el metro (pasa el ratón por la
-              tarjeta).
+              Todo mi patrimonio en una pantalla —cripto, bolsa, el piso— con el neto de verdad: descuenta sola la
+              hipoteca cada mes y simula si conviene amortizar en cuota o en plazo. Cifrada entera en el dispositivo,
+              con desbloqueo por huella y una contraseña señuelo que abre una cartera falsa.
             </p>
-            <div class="stack">
-              <span>React</span><span>Web Crypto</span><span>WebAuthn</span><span>IndexedDB</span><span>lightweight-charts</span><span>PWA</span>
-            </div>
+            <div class="stack"><span>React</span><span>Web Crypto</span><span>WebAuthn</span><span>IndexedDB</span></div>
             <div class="card-links">
+              <a href="https://boveda-ivory.vercel.app" target="_blank" rel="noreferrer">Demo ↗</a>
               <button type="button" class="shots-link" data-shots="boveda">Cómo funciona →</button>
-              <a href="https://boveda-ivory.vercel.app" target="_blank" rel="noreferrer">Demo →</a>
               <a href="https://github.com/seakerop/boveda" target="_blank" rel="noreferrer">Código →</a>
             </div>
           </div>
         </article>
 
         <article class="card reveal">
-          <div class="card-visual visual-life">
-            <div class="mock-rpg">
-              <div class="rpg-buffs"><i></i><i class="debuff"></i><i class="dim"></i><i></i></div>
-              <div class="rpg-xp"><span></span></div>
-              <div class="rpg-slots"><i class="on"></i><i></i><i class="cd"></i><i></i><i></i></div>
-            </div>
+          <div class="card-shot shot-gym">
+            <figure class="phone"><img src="img/fzth/1-home.webp" alt="Ficha del héroe en FromZeroToHero" loading="lazy" /></figure>
           </div>
           <div class="card-body">
-            <div class="card-top">
-              <h3>LifeCraft</h3>
-            </div>
+            <div class="card-top"><h3>FromZeroToHero</h3><span class="tag mono">Hábitos</span></div>
             <p>
-              Convertí la fuerza de voluntad en un MMORPG: cada hábito real es una "habilidad" que
-              lanzo —el gym, leer, pero también la pizza o el alcohol— y aplica buffs o debuffs con
-              duración de verdad, stacks y cooldown. Mis atributos (Fuerza, Constitución, Intelecto,
-              Espíritu) se recalculan solos según las auras activas. Trae creación de personaje,
-              misiones diarias, un jefe semanal al que los hábitos dañan y los vicios curan, y un
-              códice con la fisiología real de cada efecto. El nombre es épico de broma; el efecto
-              del tooltip va en serio.
+              Voy al gimnasio, así que me hice el juego: cada sesión da experiencia y mi avatar es un árbol que crece
+              con los días en que hago algo. El peso corporal nunca da puntos. En el banco veo lo que levanté la
+              última vez, los récords saltan solos y los domingos le mando mi semana a mi hermano: nuestro pacto.
             </p>
-            <div class="stack">
-              <span>React</span><span>Vite</span><span>IndexedDB</span><span>PWA</span>
+            <div class="stack"><span>React</span><span>IndexedDB</span><span>SVG</span><span>PWA</span></div>
+            <div class="card-links">
+              <a href="https://seakerop.github.io/fromzerotohero/" target="_blank" rel="noreferrer">Demo ↗</a>
+              <button type="button" class="shots-link" data-shots="fzth">Cómo funciona →</button>
+              <a href="https://github.com/seakerop/fromzerotohero" target="_blank" rel="noreferrer">Código →</a>
             </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-shot shot-life">
+            <figure class="phone"><img src="img/lifecraft/2-home.webp" alt="Pantalla de juego de LifeCraft" loading="lazy" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="card-top"><h3>LifeCraft</h3><span class="tag mono">Hábitos</span></div>
+            <p>
+              La fuerza de voluntad convertida en un juego de rol: cada hábito, bueno o malo, aplica un efecto con
+              duración real sobre mis atributos. Misiones diarias, un jefe semanal al que los hábitos dañan y los
+              vicios curan, y un códice con la fisiología real de cada efecto.
+            </p>
+            <div class="stack"><span>React</span><span>Vite</span><span>IndexedDB</span><span>PWA</span></div>
             <div class="card-links">
               <button type="button" class="shots-link" data-shots="lifecraft">Cómo funciona →</button>
               <a href="https://github.com/seakerop/lifecraft" target="_blank" rel="noreferrer">Código →</a>
@@ -157,100 +173,114 @@
         </article>
 
         <article class="card reveal">
-          <div class="card-visual visual-gym">
-            <div class="mock-gym">
-              <div class="gym-circle">
-                <span class="gym-suelo"></span>
-                <span class="gym-tronco"></span>
-                <span class="gym-copa"><i></i><i></i><i></i></span>
-              </div>
-              <div class="gym-panel">
-                <span class="gym-nombre"></span>
-                <span class="gym-xp"><span></span></span>
-                <span class="gym-series"><i>✓</i><i>✓</i><i class="falta">✓</i></span>
-              </div>
-            </div>
+          <div class="card-shot shot-cine">
+            <figure class="phone"><img src="img/cinematch/3-swipe.webp" alt="Mazo de películas en CineMatch" loading="lazy" /></figure>
           </div>
           <div class="card-body">
-            <div class="card-top">
-              <h3>FromZeroToHero</h3>
-            </div>
+            <div class="card-top"><h3>CineMatch</h3><span class="badge badge-wip">En desarrollo</span></div>
             <p>
-              Voy al gimnasio de verdad, así que me construí el juego: yo soy el personaje. Cada
-              sesión da XP — el peso corporal jamás: la báscula es solo una gráfica más — y mi
-              avatar es un árbol que crece con cada día en que hago algo, vestido con la estación
-              real del calendario. En el banco veo lo que levanté la última vez y la técnica de
-              cada ejercicio a un toque, los PRs saltan solos con su 1RM estimado, y los domingos
-              le mando mi semana a mi hermano como una tarjeta-imagen: nuestro pacto. Sigue
-              habiendo un logro por volver tras una semana mala — de eso va la app.
+              En casa tardábamos más en elegir peli que en verla. Cada uno desliza en su móvil sobre el mismo mazo y
+              cuando los dos decimos que sí, hay match. Sesiones en tiempo real entre dispositivos y catálogo de TMDB
+              filtrado por plataforma, duración y lo que ya hemos visto.
             </p>
-            <div class="stack">
-              <span>React</span><span>IndexedDB</span><span>SVG</span><span>PWA</span>
-            </div>
+            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>PWA</span></div>
             <div class="card-links">
-              <button type="button" class="shots-link" data-shots="fzth">Cómo funciona →</button>
-              <a href="https://seakerop.github.io/fromzerotohero/" target="_blank" rel="noreferrer">Demo →</a>
-              <a href="https://github.com/seakerop/fromzerotohero" target="_blank" rel="noreferrer">Código →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card reveal">
-          <div class="card-visual visual-unity">
-            <div class="mock-fps">
-              <span class="cross"></span>
-              <span class="hud-hp"><i></i></span>
-              <span class="hud-ammo">24 / 90</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-top">
-              <h3>DAMFPS</h3>
-            </div>
-            <p>Un shooter en primera persona para pelearme con Unity de verdad: movimiento, cámara y mis primeros shaders propios.</p>
-            <div class="stack"><span>Unity</span><span>C#</span><span>ShaderLab</span></div>
-            <div class="card-links">
-              <a href="https://github.com/seakerop/DAMFPS" target="_blank" rel="noreferrer">Código →</a>
+              <button type="button" class="shots-link" data-shots="cinematch">Cómo funciona →</button>
+              <span class="soon">Demo pronto</span>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- ═══ perfil: doble faceta ═══ -->
+    <!-- ═══ perfil ═══ -->
     <section id="perfil">
-      <h2 class="reveal"><span class="sec-num">02</span> Las dos mitades</h2>
-      <div class="split">
-        <div class="pane pane-dev reveal">
-          <h3>La técnica</h3>
-          <p>
-            Lo que toco ahora mismo: Kotlin y Android, web con JavaScript y React, y ratos de Unity.
-            Me pica el detalle — los estados vacíos, las animaciones que se sienten bien, el porqué
-            de cada pantalla. Prefiero una app pequeña y cuidada que una grande a medias.
-          </p>
-          <div class="stack">
-            <span>Kotlin</span><span>Java</span><span>HTML/CSS</span><span>JavaScript</span>
-            <span>React</span><span>Unity</span><span>Git</span><span>Firebase</span>
-          </div>
+      <div class="sec-head reveal">
+        <span class="sec-num mono">02</span>
+        <h2>Perfil</h2>
+        <p>Un perfil poco habitual: código, datos y psicología en la misma cabeza.</p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar reveal">
+          <span class="pillar-k mono">Producto</span>
+          <h3>Apps pequeñas y terminadas</h3>
+          <p>Prefiero una herramienta cuidada a una grande a medias: estados vacíos, errores que se explican, que funcione sin conexión y con pruebas automáticas detrás.</p>
         </div>
-        <div class="pane pane-psy reveal">
-          <h3>La humana</h3>
-          <p>
-            La psicología no es un hobby de domingo: me interesa en serio cómo decidimos, qué nos
-            frustra y qué nos engancha. Cuando diseño una pantalla, esa parte también opina —
-            y suele tener razón.
-          </p>
+        <div class="pillar reveal">
+          <span class="pillar-k mono">Datos</span>
+          <h3>Medir antes de creer</h3>
+          <p>Antes de fiarme de una regla, la pongo a prueba con datos: correlaciones, bootstrap, corrección por comparaciones múltiples. Si no aguanta, se dice.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-k mono">Personas</span>
+          <h3>Diseñar para cómo decidimos</h3>
+          <p>La psicología me sirve para lo que no sale en el código: qué motiva a volver, qué frustra y qué número nos lleva a engaño.</p>
+        </div>
+      </div>
+
+      <div class="profile-grid">
+        <div class="timeline reveal">
+          <h3 class="block-title">Trayectoria</h3>
+          <ol>
+            <li>
+              <span class="when mono">2026</span>
+              <div>
+                <b>Grado en Psicología</b> · UNIR
+                <p>TFG sobre alfabetización financiera y bienestar, con un 9,9. <a href="https://reunir.unir.net/handle/123456789/23557" target="_blank" rel="noreferrer">Publicado en Re-UNIR ↗</a></p>
+              </div>
+            </li>
+            <li>
+              <span class="when mono">2026</span>
+              <div>
+                <b>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</b> · UNIR
+              </div>
+            </li>
+            <li>
+              <span class="when mono">2025</span>
+              <div>
+                <b>Prácticas de desarrollo RPA</b> · NEORIS
+                <p>Robots de automatización con UiPath dentro de un equipo de consultoría: análisis del proceso, construcción, pruebas y documentación.</p>
+              </div>
+            </li>
+            <li>
+              <span class="when mono">2019–21</span>
+              <div>
+                <b>Líder de equipo de ayuda humanitaria</b> · YWAM, EE. UU.
+                <p>Coordinación de voluntarios en equipos multiculturales: planificar, repartir responsabilidades y seguir objetivos.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="side-blocks">
+          <div class="block reveal">
+            <h3 class="block-title">Con qué trabajo</h3>
+            <div class="stack">
+              <span>JavaScript</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>Java</span><span>Kotlin</span>
+              <span>SQL</span><span>Firebase</span><span>IndexedDB</span><span>Vitest y Jest</span><span>Git</span><span>UiPath</span>
+            </div>
+          </div>
+          <div class="block reveal">
+            <h3 class="block-title">Idiomas</h3>
+            <p class="lang"><b>Español</b> nativo</p>
+            <p class="lang"><b>Inglés</b> C2 · Cambridge Proficiency</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ═══ contacto ═══ -->
     <section id="contacto">
-      <h2 class="reveal"><span class="sec-num">03</span> Contacto</h2>
-      <p class="contact-line reveal">Busco prácticas y proyectos donde seguir creciendo como desarrollador. Si crees que puedo encajar en tu equipo, escríbeme.</p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-solid" href="mailto:saldorf1994@gmail.com">Email</a>
-        <a class="btn btn-line" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub</a>
+      <div class="contact reveal">
+        <span class="sec-num mono">03</span>
+        <h2>¿Hablamos?</h2>
+        <p>Busco mi primer puesto en un equipo de producto, datos o desarrollo, y proyectos donde haga falta entender a las personas además de al código.</p>
+        <a class="mail" href="mailto:saldorf1994@gmail.com">saldorf1994@gmail.com</a>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="mailto:saldorf1994@gmail.com">Escríbeme</a>
+          <a class="btn btn-line" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
       </div>
     </section>
   </main>
@@ -284,6 +314,15 @@
 
     // galería "cómo funciona": capturas + explicación por proyecto
     const GALLERIES = {
+      vigia: {
+        title: 'Vigía',
+        shots: [
+          { src: 'img/vigia/1-avisos.webp', cap: 'La watchlist con un aviso recién saltado. No dice solo que el RSI bajó de 50: dice que, desde 2017, esa misma regla habría saltado 118 veces y que diez días después Bitcoin no estaba mejor que cualquier otro día.' },
+          { src: 'img/vigia/2-ficha.webp', cap: 'La ficha de cada activo: velas y RSI calculados con el mismo código que evalúa las reglas, para que lo que veo sea exactamente lo que vigila.' },
+          { src: 'img/vigia/3-probador.webp', cap: 'El probador: mientras ajusto el umbral, prueba la regla contra la historia del activo y compara con lo normal a 5, 10 y 30 días. Comprar Bitcoin con el RSI por debajo de 30 no ha dado ventaja, y en los últimos tres años, menos.' },
+          { src: 'img/vigia/4-ciclo.webp', cap: 'En Bitcoin, la fase del ciclo del halving y lo que pasó en esa fase en los ciclos anteriores. Debajo, cada regla con su resumen histórico.' },
+        ],
+      },
       fzth: {
         title: 'FromZeroToHero',
         shots: [
