@@ -54,8 +54,8 @@
           <a class="btn btn-ghost" href="https://github.com/seakerop" target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
         <ul class="proof reveal" aria-label="In numbers">
-          <li><b>5</b><span>published projects</span></li>
-          <li><b>4</b><span>with a live demo</span></li>
+          <li><b>6</b><span>published projects</span></li>
+          <li><b>5</b><span>with a live demo</span></li>
           <li><b>C2</b><span>English</span></li>
         </ul>
       </div>
@@ -207,19 +207,20 @@
 
         <article class="card reveal">
           <div class="card-shot shot-cine">
-            <figure class="phone"><img src="../img/cinematch/3-swipe.webp" alt="Film catalogue in CineMatch" loading="lazy" /></figure>
+            <figure class="phone"><img src="../img/cinematch/2-descubrir.webp" alt="A series card in CineMatch" loading="lazy" /></figure>
           </div>
           <div class="card-body">
-            <div class="card-top"><h3>CineMatch</h3><span class="badge badge-wip">In progress</span></div>
+            <div class="card-top"><h3>CineMatch</h3><span class="tag mono">Leisure</span></div>
             <p>
-              An app for choosing a film as a group: everyone rates the same catalogue on their own phone and the app
-              shows the matches. Real-time sessions across devices and a TMDB catalogue filtered by platform, running
-              time and titles already watched.
+              An app for deciding what to watch as a couple or a group: everyone rates the same titles and the app
+              shows the matches. It includes a shared list that keeps filling up and stores what is left to watch,
+              real-time sessions across several phones and a single-phone mode taking turns. The catalogue comes from
+              TMDB, filtered by platform, genre and running time, with each title's trailer and streaming service.
             </p>
-            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>PWA</span></div>
+            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>Vercel</span><span>PWA</span></div>
             <div class="card-links">
+              <a href="https://cinematch-wine-xi.vercel.app" target="_blank" rel="noreferrer">Demo ↗</a>
               <button type="button" class="shots-link" data-shots="cinematch">Screenshots →</button>
-              <span class="soon">Demo coming soon</span>
             </div>
           </div>
         </article>
@@ -402,10 +403,11 @@
       cinematch: {
         title: 'CineMatch',
         shots: [
-          { src: '../img/cinematch/1-inicio.webp', cap: 'Three modes: a session between two phones with a code, joining an existing session, or a single phone taking turns.' },
-          { src: '../img/cinematch/2-setup.webp', cap: 'Session setup: platforms, content type, year, maximum running time and number of titles.' },
-          { src: '../img/cinematch/3-swipe.webp', cap: 'Each participant rates the titles in the catalogue. Data and posters come from TMDB.' },
-          { src: '../img/cinematch/4-match.webp', cap: 'Result: the titles everyone liked.' },
+          { src: '../img/cinematch/1-inicio.webp', cap: 'Home: access to the shared list and to sessions with one or several phones.' },
+          { src: '../img/cinematch/2-descubrir.webp', cap: 'Each person rates the titles by swiping the card. Data and posters come from TMDB.' },
+          { src: '../img/cinematch/3-ficha.webp', cap: 'Each title has a page with the synopsis, the trailer and links to the services where it is available.' },
+          { src: '../img/cinematch/4-match.webp', cap: 'When everyone picks the same title, the app shows it straight away.' },
+          { src: '../img/cinematch/5-pendientes.webp', cap: 'Matches are kept in the to-watch list. The wheel picks one at random.' },
         ],
       },
     }
