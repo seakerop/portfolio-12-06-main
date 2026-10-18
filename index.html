@@ -214,9 +214,11 @@
               Aplicación para decidir qué ver en pareja o en grupo: cada persona valora los mismos títulos y la app
               muestra las coincidencias. Incluye una lista compartida que se va rellenando y guarda los pendientes,
               partidas en tiempo real entre varios móviles y un modo de un solo móvil por turnos. El catálogo procede
-              de TMDB, filtrado por plataforma, género y duración, con el tráiler y la plataforma de cada título.
+              de TMDB y cada título se puntúa con la nota de IMDb, ponderada por número de votos, y con los premios
+              que recoge Wikidata. Se puede pedir una selección equilibrada, solo premiadas, joyas poco conocidas o
+              estrenos.
             </p>
-            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>Vercel</span><span>PWA</span></div>
+            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>IMDb</span><span>Wikidata</span><span>Vercel</span></div>
             <div class="card-links">
               <a href="https://cinematch-wine-xi.vercel.app" target="_blank" rel="noreferrer">Demo ↗</a>
               <button type="button" class="shots-link" data-shots="cinematch">Capturas →</button>
@@ -404,8 +406,8 @@
         title: 'CineMatch',
         shots: [
           { src: 'img/cinematch/1-inicio.webp', cap: 'Inicio: acceso a la lista compartida y a las partidas con uno o varios móviles.' },
-          { src: 'img/cinematch/2-descubrir.webp', cap: 'Cada persona valora los títulos deslizando la carta. Los datos y carteles proceden de TMDB.' },
-          { src: 'img/cinematch/3-ficha.webp', cap: 'Ficha de cada título con la sinopsis, el tráiler y enlace a las plataformas donde está disponible.' },
+          { src: 'img/cinematch/2-descubrir.webp', cap: 'Cada persona valora los títulos deslizando la carta. Cada carta muestra la nota de IMDb y, si lo tiene, el premio más importante.' },
+          { src: 'img/cinematch/3-ficha.webp', cap: 'Ficha de cada título con la sinopsis, los votos en IMDb, los premios, el tráiler y enlace a las plataformas donde está disponible.' },
           { src: 'img/cinematch/4-match.webp', cap: 'Cuando todos eligen el mismo título, la app lo indica en ese momento.' },
           { src: 'img/cinematch/5-pendientes.webp', cap: 'Las coincidencias se guardan en la lista de pendientes. La ruleta elige una al azar.' },
         ],

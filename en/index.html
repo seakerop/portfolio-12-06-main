@@ -215,9 +215,11 @@
               An app for deciding what to watch as a couple or a group: everyone rates the same titles and the app
               shows the matches. It includes a shared list that keeps filling up and stores what is left to watch,
               real-time sessions across several phones and a single-phone mode taking turns. The catalogue comes from
-              TMDB, filtered by platform, genre and running time, with each title's trailer and streaming service.
+              TMDB and each title is scored with its IMDb rating, weighted by number of votes, and with the awards
+              recorded in Wikidata. You can ask for a balanced selection, award winners only, lesser-known gems or new
+              releases.
             </p>
-            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>Vercel</span><span>PWA</span></div>
+            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>IMDb</span><span>Wikidata</span><span>Vercel</span></div>
             <div class="card-links">
               <a href="https://cinematch-wine-xi.vercel.app" target="_blank" rel="noreferrer">Demo ↗</a>
               <button type="button" class="shots-link" data-shots="cinematch">Screenshots →</button>
@@ -404,8 +406,8 @@
         title: 'CineMatch',
         shots: [
           { src: '../img/cinematch/1-inicio.webp', cap: 'Home: access to the shared list and to sessions with one or several phones.' },
-          { src: '../img/cinematch/2-descubrir.webp', cap: 'Each person rates the titles by swiping the card. Data and posters come from TMDB.' },
-          { src: '../img/cinematch/3-ficha.webp', cap: 'Each title has a page with the synopsis, the trailer and links to the services where it is available.' },
+          { src: '../img/cinematch/2-descubrir.webp', cap: 'Each person rates the titles by swiping the card. Every card shows the IMDb rating and, if there is one, its main award.' },
+          { src: '../img/cinematch/3-ficha.webp', cap: 'Each title has a page with the synopsis, IMDb votes, awards, the trailer and links to the services where it is available.' },
           { src: '../img/cinematch/4-match.webp', cap: 'When everyone picks the same title, the app shows it straight away.' },
           { src: '../img/cinematch/5-pendientes.webp', cap: 'Matches are kept in the to-watch list. The wheel picks one at random.' },
         ],
