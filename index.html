@@ -153,8 +153,9 @@
             <div class="card-top"><h3>Bóveda</h3><span class="tag mono">Finanzas</span></div>
             <p>
               Gestor de patrimonio personal (criptomonedas, bolsa e inmuebles) que calcula el patrimonio neto
-              descontando la hipoteca mes a mes e incluye un simulador de amortización anticipada. Los datos se cifran
-              en el dispositivo, con desbloqueo biométrico y una contraseña alternativa que muestra una cartera ficticia.
+              descontando la hipoteca mes a mes, la rentabilidad anual real y las ganancias para la renta por FIFO.
+              Incluye un simulador de amortización anticipada. Los datos se cifran en el dispositivo, con desbloqueo
+              biométrico y una contraseña alternativa que muestra una cartera ficticia.
             </p>
             <div class="stack"><span>React</span><span>Web Crypto</span><span>WebAuthn</span><span>IndexedDB</span></div>
             <div class="card-links">
@@ -396,10 +397,12 @@
       boveda: {
         title: 'Bóveda',
         shots: [
-          { src: 'img/boveda/1-patrimonio.webp', cap: 'Resumen del patrimonio por tipo de activo, con el patrimonio neto ya descontada la hipoteca.' },
-          { src: 'img/boveda/2-activo.webp', cap: 'Ficha de cada activo con gráfica de velas semanales. Los precios de criptomonedas y bolsa se actualizan automáticamente.' },
+          { src: 'img/boveda/1-patrimonio.webp', cap: 'El patrimonio neto, con la hipoteca ya descontada, la ganancia real y la rentabilidad anual. La línea discontinua es el dinero que he ido metiendo: la distancia hasta las velas es lo ganado.' },
+          { src: 'img/boveda/2-activo.webp', cap: 'Ficha de cada activo: precio medio, ganancia sin vender y rentabilidad anual, con velas semanales. Los precios se actualizan solos.' },
           { src: 'img/boveda/3-hipoteca.webp', cap: 'Simulador de amortización anticipada: compara reducir cuota frente a reducir plazo y calcula el ahorro en intereses.' },
           { src: 'img/boveda/4-privacidad.webp', cap: 'Modo privacidad: oculta todas las cifras con un toque.' },
+          { src: 'img/boveda/5-renta.webp', cap: 'Informe para la renta: ganancias por FIFO, como las calcula Hacienda, con la regla de los dos meses y los dividendos. Se exporta a CSV.' },
+          { src: 'img/boveda/6-huella.webp', cap: 'Desbloqueo con huella. Los datos van cifrados en el propio móvil: no hay cuentas ni servidor.' },
         ],
       },
       cinematch: {
