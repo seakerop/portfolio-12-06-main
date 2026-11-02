@@ -209,7 +209,7 @@
 
         <article class="card reveal">
           <div class="card-shot shot-cine">
-            <figure class="phone"><img src="img/cinematch/2-descubrir.webp" alt="Carta de una serie en CineMatch" loading="lazy" /></figure>
+            <figure class="phone"><img src="img/cinematch/2-descubrir.webp" alt="Carta de una película en CineMatch" loading="lazy" /></figure>
           </div>
           <div class="card-body">
             <div class="card-top"><h3>CineMatch</h3><span class="tag mono">Ocio</span></div>
@@ -219,10 +219,12 @@
               partidas en tiempo real entre varios móviles y un modo de un solo móvil por turnos. El catálogo procede
               de TMDB y cada título se puntúa con la nota de IMDb, ponderada por número de votos, y con los premios
               que recoge Wikidata. Se puede pedir una selección equilibrada, solo premiadas, joyas poco conocidas o
-              estrenos. Tiene también un modo para decidir la cena, con el mismo juego sobre tipos de comida y enlace
-              para pedir en Uber Eats.
+              estrenos. El mazo aprende de los votos y de la nota que se pone a lo ya visto, combina los gustos de
+              todos con el mismo peso y, si no hay coincidencias, muestra lo que le gustó solo a alguien. La lista
+              avisa al móvil con notificaciones cuando hay un match. Tiene también un modo para decidir la cena, con
+              el mismo juego sobre tipos de comida y enlace para pedir en Uber Eats.
             </p>
-            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>IMDb</span><span>Wikidata</span><span>Vercel</span></div>
+            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>IMDb</span><span>Wikidata</span><span>Web Push</span><span>Vercel</span></div>
             <div class="card-links">
               <a href="https://cinematch-wine-xi.vercel.app" target="_blank" rel="noreferrer">Demo ↗</a>
               <button type="button" class="shots-link" data-shots="cinematch">Capturas →</button>
@@ -412,11 +414,13 @@
       cinematch: {
         title: 'CineMatch',
         shots: [
-          { src: 'img/cinematch/1-inicio.webp', cap: 'Inicio: acceso a la lista compartida y a las partidas con uno o varios móviles.' },
+          { src: 'img/cinematch/1-inicio.webp', cap: 'Inicio: la lista compartida y, debajo, decidir en el momento con uno o varios móviles, qué ver o qué cenar.' },
           { src: 'img/cinematch/2-descubrir.webp', cap: 'Cada persona valora los títulos deslizando la carta. Cada carta muestra la nota de IMDb y, si lo tiene, el premio más importante.' },
           { src: 'img/cinematch/3-ficha.webp', cap: 'Ficha de cada título con la sinopsis, los votos en IMDb, los premios, el tráiler y enlace a las plataformas donde está disponible.' },
           { src: 'img/cinematch/4-match.webp', cap: 'Cuando todos eligen el mismo título, la app lo indica en ese momento.' },
           { src: 'img/cinematch/5-pendientes.webp', cap: 'Las coincidencias se guardan en la lista de pendientes. La ruleta elige una al azar.' },
+          { src: 'img/cinematch/8-casi.webp', cap: 'Casi matches: lo que le gustó solo a una persona. Si a la otra le vale, pasa a pendientes.' },
+          { src: 'img/cinematch/9-nota.webp', cap: 'Al marcar algo como visto se puntúa. Esa nota cuenta más que un voto para afinar los títulos siguientes.' },
           { src: 'img/cinematch/6-cena.webp', cap: 'Modo cena: el mismo juego con 28 tipos de comida, de la pizza al ramen, y lo dulce al final.' },
           { src: 'img/cinematch/7-pedir.webp', cap: 'Al coincidir, la ficha abre Uber Eats con la búsqueda hecha, o Glovo y Just Eat. Cada foto cita su autor y licencia.' },
         ],

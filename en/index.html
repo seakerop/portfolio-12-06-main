@@ -210,7 +210,7 @@
 
         <article class="card reveal">
           <div class="card-shot shot-cine">
-            <figure class="phone"><img src="../img/cinematch/2-descubrir.webp" alt="A series card in CineMatch" loading="lazy" /></figure>
+            <figure class="phone"><img src="../img/cinematch/2-descubrir.webp" alt="A film card in CineMatch" loading="lazy" /></figure>
           </div>
           <div class="card-body">
             <div class="card-top"><h3>CineMatch</h3><span class="tag mono">Leisure</span></div>
@@ -220,10 +220,12 @@
               real-time sessions across several phones and a single-phone mode taking turns. The catalogue comes from
               TMDB and each title is scored with its IMDb rating, weighted by number of votes, and with the awards
               recorded in Wikidata. You can ask for a balanced selection, award winners only, lesser-known gems or new
-              releases. There is also a mode for choosing dinner, with the same game over types of food and a link to
-              order on Uber Eats.
+              releases. The deck learns from votes and from the score given to what you have watched, combines
+              everyone's tastes with equal weight and, when nothing matches, shows what only one person liked. The list
+              sends a phone notification when there is a match. There is also a mode for choosing dinner, with the same
+              game over types of food and a link to order on Uber Eats.
             </p>
-            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>IMDb</span><span>Wikidata</span><span>Vercel</span></div>
+            <div class="stack"><span>React</span><span>Firebase</span><span>TMDB API</span><span>IMDb</span><span>Wikidata</span><span>Web Push</span><span>Vercel</span></div>
             <div class="card-links">
               <a href="https://cinematch-wine-xi.vercel.app" target="_blank" rel="noreferrer">Demo ↗</a>
               <button type="button" class="shots-link" data-shots="cinematch">Screenshots →</button>
@@ -412,11 +414,13 @@
       cinematch: {
         title: 'CineMatch',
         shots: [
-          { src: '../img/cinematch/1-inicio.webp', cap: 'Home: access to the shared list and to sessions with one or several phones.' },
+          { src: '../img/cinematch/1-inicio.webp', cap: 'Home: the shared list and, below it, deciding on the spot with one or several phones, what to watch or what to eat.' },
           { src: '../img/cinematch/2-descubrir.webp', cap: 'Each person rates the titles by swiping the card. Every card shows the IMDb rating and, if there is one, its main award.' },
           { src: '../img/cinematch/3-ficha.webp', cap: 'Each title has a page with the synopsis, IMDb votes, awards, the trailer and links to the services where it is available.' },
           { src: '../img/cinematch/4-match.webp', cap: 'When everyone picks the same title, the app shows it straight away.' },
           { src: '../img/cinematch/5-pendientes.webp', cap: 'Matches are kept in the to-watch list. The wheel picks one at random.' },
+          { src: '../img/cinematch/8-casi.webp', cap: 'Near matches: what only one person liked. If the other is happy with it, it moves to the to-watch list.' },
+          { src: '../img/cinematch/9-nota.webp', cap: 'Marking a title as watched lets you score it. That score counts for more than a vote when tuning the next titles.' },
           { src: '../img/cinematch/6-cena.webp', cap: 'Dinner mode: the same game with 28 types of food, from pizza to ramen, with dessert at the end.' },
           { src: '../img/cinematch/7-pedir.webp', cap: 'When you match, the page opens Uber Eats with the search ready, or Glovo and Just Eat. Each photo credits its author and licence.' },
         ],
